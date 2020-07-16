@@ -59,10 +59,16 @@ You can stop running using this command
 sudo /usr/local/nginx/sbin/nginx -s stop
 ```
 
-## Change conf and html file
-1. Change nginx.conf file 
+## Change file and Open port 
 
-2. Copy html file
+Copy nginx.conf file to /usr/local/nginx/conf/nginx.conf
+
+Copy html/* file to /usr/local/nginx/html/
+
+Open 5080 port. If you want to change port, just edit /usr/local/nginx/conf/nginx.conf
+```c
+sudo iptables -I INPUT 1 -p tcp --dport 5080 -j ACCEPT
+```
 
 ## Streaming
 
