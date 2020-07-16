@@ -75,12 +75,12 @@ sudo iptables -I INPUT 1 -p tcp --dport 5080 -j ACCEPT
 ### VOD
 You can watch your video with RTMP
 ```c
-rtmp://localhost:1935/stream/dash/test.mp4
+rtmp://localhost:1935/stream/dash/test_input.mp4
 ```
 
 You can watch your video with HTTP
 ```c
-http://localhost:5080/dash/test.mp4
+http://localhost:5080/dash/test_input.mp4
 ```
 ```c
 http://localhost:5080/dash_final/output.mpd
