@@ -80,15 +80,15 @@ rtmp://localhost:1935/stream/dash/test.mp4
 
 You can watch your video with HTTP
 ```c
-http://localhost/dash/test.mp4
+http://localhost:5080/dash/test.mp4
 ```
 ```c
-http://localhost/dash_final/output.mpd
+http://localhost:5080/dash_final/output.mpd
 ```
 
 Also you can check dash streaming on your testpage
 ```c
-http://localhost/testpage
+http://localhost:5080/testpage
 ```
 
 ### Live Streaming
