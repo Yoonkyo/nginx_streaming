@@ -86,10 +86,11 @@ http://localhost:5080/dash/test.mp4
 http://localhost:5080/dash_final/output.mpd
 ```
 
-Also you can check dash streaming on your testpage
+Also you can check dash streaming on your testpage. You should change 'localhost' to explicit ip address in your testpage html.
 ```c
 http://localhost:5080/testpage
 ```
+
 
 ### Live Streaming
 Use broadcast application to publish your live streaming. I utilized OBS studio.
