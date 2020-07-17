@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Player Test</title>
+		<style>
+body {
+	<!-- width: 35em; -->
+margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+	    video {
+		    width: 800px;
+		    height: 450px;
+	    }
+		</style>
+	</head>
+	<body>
+		<script type='text/javascript' src='jwplayer.js'></script>
+		<script>jwplayer.key='iiL9xxalkP7di2nLZ3tPLw0NLBCHdHBe8i3QDQ==';</script>  
+		<center>
+			<h1>Player test (VOD, Live Streaming)</h1>
+			<p>Edit by ykjung <br/>
+			<br>
+			If you see this page, the nginx web server is successfully installed and
+			working. Further configuration is required.</p>
+
+			<p>For online documentation and support please refer to
+			<a href="http://nginx.org/">nginx.org</a>.<br/>
+			Commercial support is available at
+			<a href="http://nginx.com/">nginx.com</a>.</p>
+
+			<br><br>
+			<b>Basic Player (JW player)</b><br>
+			<div id='mediaspace1'></div>
+			<script type='text/javascript'>
+				jwplayer('mediaspace1').setup({
+					file: "http://localhost:5080/dash/test_input.mp4",
+					controlbar: "bottom",
+					width: "800",
+					height: "450"
+				});
+			</script>
+			<br />
+
+			<br><br>
+			<b>DASH Player (DASH.js)</b><br>
+			<div>
+				<video data-dashjs-player autoplay src="http://localhost:5080/dash_final/output.mpd" controls type="application/dash+xml">
+				</video>
+			</div>
+			<script src="dash.all.min.js"></script>
+
+
+			<br><br>
+			<b>Live Streaming with RTMP(JW player)</b><br>
+			<div id='mediaspace2'></div>
+			<script type='text/javascript'>
+				jwplayer('mediaspace2').setup({
+					flashplayer: 'player.swf',
+					file: "rtmp://localhost:1935/stream/test",
+					controlbar: "bottom",
+					width: "800",
+					height: "450"
+				});
+			</script>
+			<br />
+
+			<br><br>
+			<b>Live Streaming with hls(JW player)</b><br>
+			<div id='mediaspace3'></div>
+			<script type='text/javascript'>
+				jwplayer('mediaspace3').setup({
+					flashplayer: 'player.swf',
+					file: "http://localhost:5080/stream/test.m3u8",
+					controlbar: "bottom",
+					width: "800",
+					height: "450"
+				});
+			</script>
+			<br />
+
+
+		</center>
+	</body>
+</html>

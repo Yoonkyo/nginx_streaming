@@ -1,0 +1,2 @@
+add this script
+<script>jwplayer.key='iiL9xxalkP7di2nLZ3tPLw0NLBCHdHBe8i3QDQ==';</script>
