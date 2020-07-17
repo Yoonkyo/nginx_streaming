@@ -40,7 +40,7 @@ sudo make install
 
 ## Check nginx server
 
-Move your nginx directory. It is located in /usr/local/nginx. But it can be located in /etc/nginx if you install nginx using apt-get command.
+Move to your nginx directory. It is located in /usr/local/nginx. But it can be located in /etc/nginx if you install nginx using apt-get command.
 ```c
 cd /usr/local/nginx
 ```
@@ -70,9 +70,22 @@ Open 5080 port. If you want to change port, just edit /usr/local/nginx/conf/ngin
 sudo iptables -I INPUT 1 -p tcp --dport 5080 -j ACCEPT
 ```
 
+## MPEG-DASH Encoding
+
+Move to dash_final directory
+```c
+cd /usr/local/nginx/html/stream/dash_final/
+```
+
+Run the 'dash encoder'
+```c
+sudo python encoder_final.py
+```
+
 ## Streaming
 
 ### VOD
+
 You can watch your video with RTMP
 ```c
 rtmp://localhost:1935/stream/dash/test_input.mp4
@@ -86,7 +99,7 @@ http://localhost:5080/dash/test_input.mp4
 http://localhost:5080/dash_final/output.mpd
 ```
 
-Also you can check dash streaming on your testpage. You should change 'localhost' to explicit ip address in your testpage html.
+Also you can check dash streaming on your testpage. You should change 'localhost' to explicit ip address in your testpage html (~/testpage/index.html).
 ```c
 http://localhost:5080/testpage
 ```
@@ -102,3 +115,14 @@ Use broadcast application to publish your live streaming. I utilized OBS studio.
 3) Click 'start streaming'
 
 4) Test with your video player (connect rtmp://localhost:1935/stream/test)
+
+You can transcode RTMP to HLS.
+
+1) Check the live streaming is running (connect rtmp://localhost:1935/stream/test)
+
+2) Transcode RTMP to HLS
+```c
+ffmpeg -i rtmp://localhost:1935/stream/test -vcodec libx264 -preset veryfast -b:v 2000k -maxrate 2000k -bufsize 2000k -s 1280x720 -sws_flags lanczos -r 60 -acodec copy -f flv rtmp://localhost:1935/hls/test
+```
+
+3) Test with your video player (connect http://localhost:5080/hls/test.m3u8)
