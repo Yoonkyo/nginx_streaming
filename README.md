@@ -37,6 +37,14 @@ make
 sudo make install
 ```
 
+If you get this error while compiling 
+
+"error: this statement may fall through [-Werror=implicit-fallthrough=]"
+
+Rum this command and compile again.
+```c
+./configure --add-module=../nginx-rtmp-module --with-cc-opt="-Wimplicit-fallthrough=0"
+```
 
 ## Check nginx server
 
