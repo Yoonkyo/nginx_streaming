@@ -89,6 +89,7 @@ Run the 'dash encoder'
 ```c
 sudo python encoder_final.py
 ```
+*Prerequisite: ffmpeg, MP4Box
 
 ## Streaming
 
