@@ -41,7 +41,7 @@ If you get this error while compiling
 
 "error: this statement may fall through [-Werror=implicit-fallthrough=]"
 
-Rum this command and compile again.
+Run this command and compile again.
 ```c
 ./configure --add-module=../nginx-rtmp-module --with-cc-opt="-Wimplicit-fallthrough=0"
 ```
