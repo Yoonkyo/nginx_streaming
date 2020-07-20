@@ -1,7 +1,7 @@
 import time
 import os
 
-inputfile = "200525_red5_testvideo.mp4"
+inputfile = "test_input.mp4"
 
 ###Make videos with other bitrate###
 os.system("ffmpeg -y -i " + inputfile + """ -c:a libfdk_aac -ac 2 -ab 128k -c:v libx264 -x264opts 'keyint=24:min-keyint=24:no-scenecut' -b:v 1500k -maxrate 1500k -bufsize 1000k -vf "scale=-1:720" outputfile720.mp4""")
