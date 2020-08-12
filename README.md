@@ -91,6 +91,8 @@ sudo python encoder_final.py
 ```
 *Prerequisite: ffmpeg, MP4Box
 
+If you have trouble with encoding, move dash_final directory to your local directory and encode again.
+
 ## Streaming
 
 ### VOD
