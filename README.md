@@ -87,7 +87,7 @@ cd /usr/local/nginx/html/stream/dash_final/
 
 Run the 'dash encoder'
 ```c
-sudo python encoder_final.py
+sudo python dash_encoder.py
 ```
 *Prerequisite: ffmpeg, MP4Box
 
