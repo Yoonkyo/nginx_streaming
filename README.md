@@ -79,6 +79,11 @@ sudo iptables -I INPUT 1 -p tcp --dport 1935 -j ACCEPT
 sudo iptables -I INPUT 1 -p tcp --dport 5080 -j ACCEPT
 ```
 
+Yon can check open ports with this command.
+```c
+netstat -tnlp
+```
+
 ## MPEG-DASH Encoding
 
 Move to dash_final directory
