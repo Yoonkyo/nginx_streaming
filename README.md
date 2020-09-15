@@ -73,8 +73,9 @@ Copy nginx.conf file to /usr/local/nginx/conf/nginx.conf
 
 Copy html/* file to /usr/local/nginx/html/
 
-Open 5080 port. If you want to change port, just edit /usr/local/nginx/conf/nginx.conf
+Open 1935(for rtmp) and 5080(for http) port. If you want to change port, just edit /usr/local/nginx/conf/nginx.conf
 ```c
+sudo iptables -I INPUT 1 -p tcp --dport 1935 -j ACCEPT
 sudo iptables -I INPUT 1 -p tcp --dport 5080 -j ACCEPT
 ```
 
