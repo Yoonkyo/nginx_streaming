@@ -99,6 +99,7 @@ sudo python dash_encoder.py
 
 If you have trouble with encoding, move dash_final directory to your local directory and encode again.
 
+
 ## Streaming
 
 ### VOD
@@ -123,6 +124,7 @@ http://localhost:5080/testpage
 
 
 ### Live Streaming
+
 Use broadcast application to publish your live streaming. I utilized OBS studio.
 
 1) Connect rtmp://localhost:1935/stream and set your broadcast name(e.g. test)
