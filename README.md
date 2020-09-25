@@ -91,13 +91,23 @@ Move to dash_final directory
 cd /usr/local/nginx/html/stream/dash_final/
 ```
 
+You should install 'Python FFmpeg Video Streaming' package and 'FFmpeg' to use dash encoder
+```c
+pip install python-ffmpeg-video-streaming
+```
+```c
+sudo apt-get install ffmpeg
+```
+
 Run the 'dash encoder'
 ```c
 sudo python dash_encoder.py
 ```
-*Prerequisite: ffmpeg, MP4Box
+*Prerequisite: FFmpeg and FFprobe binaries
 
-If you have trouble with encoding, move dash_final directory to your local directory and encode again.
+If you have trouble with encoding, move dash_final directory to your local directory and encode again
+
+It may be a read/write permission problem
 
 
 ## Streaming
