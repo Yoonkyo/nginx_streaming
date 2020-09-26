@@ -92,6 +92,10 @@ cd /usr/local/nginx/html/stream/dash_final/
 ```
 
 You should install 'Python FFmpeg Video Streaming' package and 'FFmpeg' to use dash encoder
+
+* [Python FFmpeg Video Streaming](https://pypi.org/project/python-ffmpeg-video-streaming/)
+* [FFmpeg](https://ffmpeg.org/download.html)
+
 ```c
 pip install python-ffmpeg-video-streaming
 ```
