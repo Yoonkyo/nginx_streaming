@@ -1,4 +1,4 @@
-# nginx_streaming
+# Nginx Streaming Server
 Nginx-based Media Streaming Server (only conf and html source)
 
 ## Download nginx and nginx-rtmp-module
