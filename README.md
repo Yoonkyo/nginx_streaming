@@ -5,7 +5,7 @@ Nginx-based Media Streaming Server (only conf and html source)
 
 Download nginx
 ```c
-wget http://nginx.org/download/nginx-1.19.1.tar.gz
+wget http://nginx.org/download/nginx-1.19.8.tar.gz
 ```
 
 Download nginx
@@ -15,14 +15,14 @@ git clone https://github.com/arut/nginx-rtmp-module.git
 
 Unzip nginx file
 ```c
-tar -zxvf nginx-1.19.1.tar.gz 
+tar -zxvf nginx-1.19.8.tar.gz 
 ```
 
 ## Build
 
 Move to nginx direnctory
 ```c
-cd nginx-1.19.1
+cd nginx-1.19.8
 ```
 
 Install dependencies
