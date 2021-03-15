@@ -15,7 +15,7 @@ git clone https://github.com/arut/nginx-rtmp-module.git
 
 Unzip nginx file
 ```c
-tar -xvzf nginx-1.19.1.tar.gz 
+tar -zxvf nginx-1.19.1.tar.gz 
 ```
 
 ## Build
