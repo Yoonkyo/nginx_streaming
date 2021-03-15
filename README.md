@@ -32,7 +32,7 @@ sudo apt-get install gcc libpcre3-dev zlib1g-dev libssl-dev libxml2-dev libxslt1
 
 Run this command
 ```c
-./configure --add-module=/path/to/nginx-rtmp-module --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid --with-http__ssl_module
+./configure --add-module=/path/to/nginx-rtmp-module --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid --with-http_ssl_module
 make
 sudo make install
 ```
