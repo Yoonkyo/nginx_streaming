@@ -1,6 +1,14 @@
 # Nginx Streaming Server
 Nginx-based Media Streaming Server (only conf and html source)
 
+## Install ubuntu packages
+
+Update and upgrade
+```c
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 ## Download nginx and nginx-rtmp-module
 
 Download nginx
